@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-slate-100 font-sans antialiased overflow-x-hidden selection:bg-emerald-500 selection:text-black;
+  }
+}
+
+/* Custom Tactical Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #090d16;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #10b981;
+}
+
+/* Radar & Pulse Animations */
+@keyframes corridorPulse {
+  0% {
+    stroke-dashoffset: 40;
+    filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.6));
+  }
+  50% {
+    filter: drop-shadow(0 0 12px rgba(16, 185, 129, 0.9));
+  }
+  100% {
+    stroke-dashoffset: 0;
+    filter: drop-shadow(0 0 4px rgba(16, 185, 129, 0.6));
+  }
+}
+
+.animate-corridor {
+  stroke-dasharray: 8 6;
+  animation: corridorPulse 2s linear infinite;
+}
+
+@keyframes beaconPing {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.9;
+  }
+  70%, 100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+
+.animate-beacon {
+  animation: beaconPing 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes radarSweep {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-radar {
+  animation: radarSweep 6s linear infinite;
+}
+
+/* Dark Tactical Backdrop */
+.command-backdrop {
+  background-image: 
+    radial-gradient(rgba(16, 185, 129, 0.04) 1px, transparent 1px),
+    radial-gradient(rgba(59, 130, 246, 0.04) 1px, transparent 1px);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Glassmorphism Panel */
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-panel-emerald {
+  background: rgba(6, 78, 59, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+}
+
+.glass-panel-danger {
+  background: rgba(127, 29, 29, 0.3);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
