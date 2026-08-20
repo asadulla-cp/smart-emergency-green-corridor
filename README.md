@@ -191,6 +191,3 @@ Use the center tabs in the top header navbar to switch views:
 **Answer**: Yes! Dispatch additional units using the `Dispatch Unit` modal. The map will display all active ambulances with their individual vehicle badges and siren indicators.
 
 ---
-
-## 📜 License
-Distributed under the MIT License. AEGIS Emergency Command Center.
