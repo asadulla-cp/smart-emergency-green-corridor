@@ -8,7 +8,7 @@
 
 ## 📌 Quick Start (Accessing the App)
 
-1. Open your web browser and go to: **`http://localhost:3002/`**
+1. Open your web browser and go to: **`https://smart-emergency-green-corridor.vercel.app/`**
 2. You will immediately see the dark tactical **Emergency Traffic Command Center** dashboard.
 
 ---
